@@ -1,0 +1,12 @@
+{
+        ".url": {
+                "com.blogspot.fujirou2.HelloWorld": {
+                        "type": "legacy",
+                        "title": "Hello World!",
+                        "url": "3rdparty/HelloWorld/index.html",
+			"icon": "images/Avengers-Iron-Man-icon-{0}.png",
+                        "allUsers": true
+                }
+        }
+}
+
