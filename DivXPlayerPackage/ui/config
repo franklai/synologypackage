@@ -1,0 +1,57 @@
+{
+	"DivXPlayer.js": {
+		"com.blogspot.fujirou2.DivXPlayer.Application": {
+			"type": "app",
+			"hidden": true,
+			"title": "DivX Player",
+			"icon": "images/player_{0}.png",
+			"allUsers": true,
+			"appWindow": "com.blogspot.fujirou2.DivXPlayer.MainWindow",
+			"depend": [
+				"com.blogspot.fujirou2.DivXPlayer.MainWindow",
+				"SYNO.SDS.VideoPlayer.Util"
+			],
+			"fb_extern": [{
+				"dir": false,
+				"launchFn": "com.blogspot.fujirou2.DivXPlayer.launchFn",
+				"file": ["avi", "mkv", "mp4", "mov"],
+				"icon": "images/player_16.png",
+				"text": "Play using DivX Web Player"
+			}]
+		},
+		"com.blogspot.fujirou2.DivXPlayer.MainWindow": {
+			"type": "lib",
+			"title": "DivX Player",
+			"icon": "images/player_{0}.png"
+		},
+		"com.blogspot.fujirou2.DivXPlayer.launchFn": []
+	},
+	"QuickTimePlayer.js": {
+		"com.blogspot.fujirou2.QuickTimePlayer.Application": {
+			"type": "app",
+			"hidden": true,
+			"title": "QuickTime Player",
+			"icon": "images/quicktime_{0}.png",
+			"allUsers": true,
+			"appWindow": "com.blogspot.fujirou2.QuickTimePlayer.MainWindow",
+			"depend": [
+				"com.blogspot.fujirou2.QuickTimePlayer.MainWindow",
+				"SYNO.SDS.VideoPlayer.Util"
+			],
+			"fb_extern": [{
+				"dir": false,
+				"launchFn": "com.blogspot.fujirou2.QuickTimePlayer.launchFn",
+				"file": [],
+				"icon": "images/quicktime_16.png",
+				"text": "Play using QuickTime Player"
+			}]
+		},
+		"com.blogspot.fujirou2.QuickTimePlayer.MainWindow": {
+			"type": "lib",
+			"title": "QuickTime Player",
+			"icon": "images/quicktime_{0}.png"
+		},
+		"com.blogspot.fujirou2.QuickTimePlayer.launchFn": []
+	}
+}
+
