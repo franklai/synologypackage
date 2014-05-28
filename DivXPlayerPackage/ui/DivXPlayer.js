@@ -1,7 +1,8 @@
+/* globals com */
 Ext.ns('com.blogspot.fujirou2.DivXPlayer');
 
 com.blogspot.fujirou2.DivXPlayer.launchFn = function (param) {
-	var path = param[0].get("path");
+// 	var path = param[0].get("path");
 
 	// path is
 	// /volume1/video/ELECTRIC FIRE 2007~Tribute to BASARA & MYLENE~.avi
@@ -20,7 +21,7 @@ com.blogspot.fujirou2.DivXPlayer.Application = Ext.extend(SYNO.SDS.AppInstance, 
 
 com.blogspot.fujirou2.DivXPlayer.MainWindow = Ext.extend(SYNO.SDS.AppWindow, {
 	constructor: function (cfg) {
-		config = this.getConfig(cfg);
+		var config = this.getConfig(cfg);
 		com.blogspot.fujirou2.DivXPlayer.MainWindow.superclass.constructor.call(this, config);
 	},
 	getConfig: function (cfg) {
@@ -59,7 +60,7 @@ com.blogspot.fujirou2.DivXPlayer.MainWindow = Ext.extend(SYNO.SDS.AppWindow, {
 			encodeURIComponent(fileName),
 			encodeURIComponent(sid),
 			SYNO.SDS.VideoPlayer.Util.bin2hex(path)
-		)
+		);
 	},
 	getHtml: function(file_id) {
 		var divxHtml,
@@ -104,7 +105,7 @@ com.blogspot.fujirou2.DivXPlayer.MainWindow = Ext.extend(SYNO.SDS.AppWindow, {
 		com.blogspot.fujirou2.DivXPlayer.MainWindow.superclass.onRequest.apply(this, arguments);
 
 		if (param && param.path) {
-			this.playVideo(a.path, a.file_id);
+			this.playVideo(param.path, param.file_id);
 			return;
 		}
 		if (param  && param.fb_recs && param.fb_recs[0]) {
